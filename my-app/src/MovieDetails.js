@@ -1,11 +1,11 @@
 import {useState, useEffect} from "react";
-import {getMoviesDetailsById} from './utils';
+import {getMovieDetailsById} from './utils';
 
 const MovieDetails = ({movieId}) => {
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    getMoviesDetailsById(movieId).then(response => {
+    getMovieDetailsById(movieId).then(response => {
       setMovie(response);
     })
   }, [movieId]);
